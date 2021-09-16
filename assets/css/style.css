@@ -8,9 +8,6 @@
 
 /* Site Core Colors + Style*/
 :root {
-    --primary: rgb(211, 31, 31);
-    --secondary:rgb(90, 192, 59);
-    --tertiary: rgb(110, 46, 161);
     --dark: rgb(48, 48, 48);
     --light: rgb(253, 253, 253);
 }
@@ -54,8 +51,11 @@ header h1 {
     line-height: 1;
 }
 
+header a {
+    color: var(--dark);
+}
 header a:hover {
-    color: var(--light);
+    color: var(--dark);
 }
 
 /* Navigational Items */
