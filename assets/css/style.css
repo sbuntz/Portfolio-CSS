@@ -1,0 +1,310 @@
+
+/*Import Font*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:900|Roboto+Mono:300,400,700);
+
+* {
+    box-sizing: border-box;
+}
+
+/* Site Core Colors + Style*/
+:root {
+    --primary: rgb(211, 31, 31);
+    --secondary:rgb(90, 192, 59);
+    --tertiary: rgb(110, 46, 161);
+    --dark: rgb(48, 48, 48);
+    --light: rgb(253, 253, 253);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto Mono;
+    font-weight: 100;
+    color: var(--light);
+    background-color: var(--dark);
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+/* Header Items */
+header {
+    padding: 1.25% 6% 1.25% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--dark);
+}
+
+header h1 {
+    color: var(--dark);
+    background-color: var(--light);
+    padding: 0.5% 1% 0.5% 5%;
+    margin: 0;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+header a:hover {
+    color: var(--light);
+}
+
+/* Navigational Items */
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: var(--light);
+    margin-right: 10px;
+    background-image: linear-gradient(270deg, var(--light) 0%, var(--light) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    background-position: bottom;
+    transition: all 0.1s ease-in;
+    font-size: 20px;
+}
+
+nav a:hover {
+    background-size: 100% 100%;
+    color: var(--dark);
+}
+
+
+main {
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+
+/* Hero Content */
+.hero-banner {
+    background:var(--dark);
+    background-image: url("../images/hero.jpg");
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center;
+    min-height: 40vh;
+    color: var(--light);
+    padding: 2% 6%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+}
+
+
+.hero-banner h2 {
+    background-color: rgba(48, 48, 48, .50);;
+    color: var(--light);
+    font-size: 32px;
+    font-weight: 100;
+    line-height: 1.2;
+    display: inline;
+}
+
+/* Main Page Content */
+
+.page-wrapper {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-section {
+    margin: 25px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.page-section > h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 2px solid var(--light);
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.1;
+}
+
+.page-section > div {
+    flex: 0 0 75%;
+}
+
+.page-section p {
+    margin-bottom: 20px;
+    color: var(--light);
+}
+
+/* Grid Structure */
+.grid-container {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(150px, 2fr);
+}
+
+.grid-item {
+    border: 5px solid var(--light);
+    grid-column: span 4;
+    background-color: var(--dark);
+    color: var(--light);
+    min-height: 100px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    transition: all 0.5s;
+    font-size: 0.8rem;
+}
+
+/* Grid Portfolio - Feature First  gird item */
+.grid-item:first-child {
+    grid-column: span 8;
+    grid-row: span 2;
+}
+
+.grid-item:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.grid-item div {
+    background-color: var(--dark);
+    padding: 8px 10px;
+
+}
+
+.grid-item h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/*Project Images*/
+.horiseon {
+    background-image: url("../images/horiseon.png");
+    background-position: center;
+}
+
+
+/* Contact Section - same styling as Nav */
+.contact address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.contact address a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: var(--light);
+    margin-right: 10px;
+    background-image: linear-gradient(270deg, var(--light) 0%, var(--light) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    background-position: bottom;
+    transition: all 0.1s ease-in;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.contact address a:hover {
+    background-size: 100% 88%;
+    color: var(--dark);
+}
+
+/* Footer (not used) formatting */
+footer  {
+    font-size: 12px;
+    text-align: center;
+    vertical-align: bottom;
+    font-style: italic;
+  }
+
+
+
+
+
+/* MEDIA QUERIES*/
+
+/* Max Width 980px*/
+
+@media screen and (max-width: 980px) {
+    header {
+        padding: 0 0 10px 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    header h1 {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        font-size: 10vw;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    .page-section > h2,
+    .page-section > div {
+        flex: 0 0 100%;
+    }
+
+    .page-section > h2 {
+        border-right: none;
+        border-bottom: 4px solid var(--light);
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .hero-banner {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding-left: 50px;
+    }
+}
+
+/* Max Width 768px*/
+@media screen and (max-width: 768px) {
+    .grid-item,
+    .grid-item:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .grid-container {
+        grid-auto-rows: minmax(200px, 1fr);
+    }
+
+    .contact address {
+        flex-direction: column;
+        align-items: center;
+    }
+}
