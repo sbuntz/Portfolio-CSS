@@ -38,21 +38,16 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    background-color: var(--dark);
 }
 
-header h1 {
-    color: var(--dark);
-    background-color: var(--light);
-    padding: 0.5% 1% 0.5% 5%;
-    margin: 0;
-    font-size: 45px;
-    font-weight: 400;
-    line-height: 1;
-}
+
 
 header a {
-    color: var(--dark);
+    color: var(--light);
+    padding-left: 5rem;
+    font-size: 45px;
+    font-weight: 300;
+    text-decoration: none;
 }
 header a:hover {
     color: var(--dark);
@@ -76,6 +71,7 @@ nav a {
     background-position: bottom;
     transition: all 0.1s ease-in;
     font-size: 20px;
+    
 }
 
 nav a:hover {
